@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C74218D23AEB9D100A56202 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74218C23AEB9D100A56202 /* Movement.swift */; };
+		4C74218F23AECA9D00A56202 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74218E23AECA9D00A56202 /* Renderer.swift */; };
+		4C74219123AECF9500A56202 /* RasterizeShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C74219023AECF9500A56202 /* RasterizeShaders.metal */; };
+		4C74219323AF1EB600A56202 /* HairSimulation.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C74219223AF1EB600A56202 /* HairSimulation.metal */; };
+		4C8B287E23273BC8000EFED3 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B287D23273BC8000EFED3 /* UtilityFunctions.swift */; };
+		4CE46D102318BBC4008E56C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE46D0F2318BBC4008E56C7 /* AppDelegate.swift */; };
+		4CE46D122318BBC5008E56C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE46D112318BBC5008E56C7 /* Assets.xcassets */; };
+		4CE46D152318BBC5008E56C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE46D132318BBC5008E56C7 /* Main.storyboard */; };
+		4CE46D202318BC29008E56C7 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE46D1D2318BC29008E56C7 /* RenderView.swift */; };
+		4CE46D212318BC29008E56C7 /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE46D1E2318BC29008E56C7 /* RenderViewController.swift */; };
+		4CE46D222318BC29008E56C7 /* MetalKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE46D1F2318BC29008E56C7 /* MetalKeys.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C74218C23AEB9D100A56202 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
+		4C74218E23AECA9D00A56202 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		4C74219023AECF9500A56202 /* RasterizeShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = RasterizeShaders.metal; sourceTree = "<group>"; };
+		4C74219223AF1EB600A56202 /* HairSimulation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = HairSimulation.metal; sourceTree = "<group>"; };
+		4C8B287D23273BC8000EFED3 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
+		4CE46D0C2318BBC4008E56C7 /* GPUCloth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUCloth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE46D0F2318BBC4008E56C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CE46D112318BBC5008E56C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CE46D142318BBC5008E56C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CE46D162318BBC5008E56C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CE46D172318BBC5008E56C7 /* GPUCloth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GPUCloth.entitlements; sourceTree = "<group>"; };
+		4CE46D1D2318BC29008E56C7 /* RenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		4CE46D1E2318BC29008E56C7 /* RenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
+		4CE46D1F2318BC29008E56C7 /* MetalKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalKeys.swift; sourceTree = "<group>"; };
+		4CE46D252318BD6F008E56C7 /* GPUCloth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPUCloth-Bridging-Header.h"; sourceTree = "<group>"; };
+		4CE46D2A2318BF5D008E56C7 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		4CE46D2B2318BF5D008E56C7 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		4CE46D2C2318BF5D008E56C7 /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
+		4CE46D332318CABE008E56C7 /* ShaderStructures.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ShaderStructures.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CE46D092318BBC4008E56C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C8B287A23273AD9000EFED3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				4C74218C23AEB9D100A56202 /* Movement.swift */,
+				4C8B287D23273BC8000EFED3 /* UtilityFunctions.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		4CE46D032318BBC4008E56C7 = {
+			isa = PBXGroup;
+			children = (
+				4CE46D0E2318BBC4008E56C7 /* GPUCloth */,
+				4CE46D0D2318BBC4008E56C7 /* Products */,
+				4CE46D292318BF5D008E56C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4CE46D0D2318BBC4008E56C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CE46D0C2318BBC4008E56C7 /* GPUCloth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CE46D0E2318BBC4008E56C7 /* GPUCloth */ = {
+			isa = PBXGroup;
+			children = (
+				4CE46D0F2318BBC4008E56C7 /* AppDelegate.swift */,
+				4CE46D1F2318BC29008E56C7 /* MetalKeys.swift */,
+				4CE46D1D2318BC29008E56C7 /* RenderView.swift */,
+				4C74218E23AECA9D00A56202 /* Renderer.swift */,
+				4C8B287A23273AD9000EFED3 /* Library */,
+				4CE46D1E2318BC29008E56C7 /* RenderViewController.swift */,
+				4CE46D112318BBC5008E56C7 /* Assets.xcassets */,
+				4CE46D132318BBC5008E56C7 /* Main.storyboard */,
+				4CE46D162318BBC5008E56C7 /* Info.plist */,
+				4CE46D172318BBC5008E56C7 /* GPUCloth.entitlements */,
+				4CE46D252318BD6F008E56C7 /* GPUCloth-Bridging-Header.h */,
+				4CE46D332318CABE008E56C7 /* ShaderStructures.h */,
+				4C74219223AF1EB600A56202 /* HairSimulation.metal */,
+				4C74219023AECF9500A56202 /* RasterizeShaders.metal */,
+			);
+			path = GPUCloth;
+			sourceTree = "<group>";
+		};
+		4CE46D292318BF5D008E56C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CE46D2A2318BF5D008E56C7 /* Metal.framework */,
+				4CE46D2B2318BF5D008E56C7 /* MetalKit.framework */,
+				4CE46D2C2318BF5D008E56C7 /* MetalPerformanceShaders.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CE46D0B2318BBC4008E56C7 /* GPUCloth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CE46D1A2318BBC5008E56C7 /* Build configuration list for PBXNativeTarget "GPUCloth" */;
+			buildPhases = (
+				4CE46D082318BBC4008E56C7 /* Sources */,
+				4CE46D092318BBC4008E56C7 /* Frameworks */,
+				4CE46D0A2318BBC4008E56C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPUCloth;
+			productName = GPUCloth;
+			productReference = 4CE46D0C2318BBC4008E56C7 /* GPUCloth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CE46D042318BBC4008E56C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Michael Kelly";
+				TargetAttributes = {
+					4CE46D0B2318BBC4008E56C7 = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+				};
+			};
+			buildConfigurationList = 4CE46D072318BBC4008E56C7 /* Build configuration list for PBXProject "GPUCloth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CE46D032318BBC4008E56C7;
+			productRefGroup = 4CE46D0D2318BBC4008E56C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CE46D0B2318BBC4008E56C7 /* GPUCloth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CE46D0A2318BBC4008E56C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE46D122318BBC5008E56C7 /* Assets.xcassets in Resources */,
+				4CE46D152318BBC5008E56C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CE46D082318BBC4008E56C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C74219323AF1EB600A56202 /* HairSimulation.metal in Sources */,
+				4CE46D202318BC29008E56C7 /* RenderView.swift in Sources */,
+				4CE46D222318BC29008E56C7 /* MetalKeys.swift in Sources */,
+				4C74218D23AEB9D100A56202 /* Movement.swift in Sources */,
+				4CE46D102318BBC4008E56C7 /* AppDelegate.swift in Sources */,
+				4C8B287E23273BC8000EFED3 /* UtilityFunctions.swift in Sources */,
+				4C74218F23AECA9D00A56202 /* Renderer.swift in Sources */,
+				4C74219123AECF9500A56202 /* RasterizeShaders.metal in Sources */,
+				4CE46D212318BC29008E56C7 /* RenderViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4CE46D132318BBC5008E56C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CE46D142318BBC5008E56C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CE46D182318BBC5008E56C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CE46D192318BBC5008E56C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4CE46D1B2318BBC5008E56C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GPUCloth/GPUCloth.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3U7CP36467;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GPUCloth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MKelly.GPUCloth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GPUCloth/GPUCloth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4CE46D1C2318BBC5008E56C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GPUCloth/GPUCloth.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3U7CP36467;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GPUCloth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MKelly.GPUCloth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GPUCloth/GPUCloth-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CE46D072318BBC4008E56C7 /* Build configuration list for PBXProject "GPUCloth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CE46D182318BBC5008E56C7 /* Debug */,
+				4CE46D192318BBC5008E56C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CE46D1A2318BBC5008E56C7 /* Build configuration list for PBXNativeTarget "GPUCloth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CE46D1B2318BBC5008E56C7 /* Debug */,
+				4CE46D1C2318BBC5008E56C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CE46D042318BBC4008E56C7 /* Project object */;
+}
