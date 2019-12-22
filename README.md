@@ -1,2 +1,5 @@
-# I_LOVE_HAIR
- 
+# I ❤️ LOVE ❤️ HAIR
+# 💇‍♀️
+# 💇‍♂️
+# 💈
+
