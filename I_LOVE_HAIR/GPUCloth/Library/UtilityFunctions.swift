@@ -170,3 +170,16 @@ func createRandomTexture(device: MTLDevice, width: Int, height: Int, usage: MTLT
     
 }
 
+func angleBetween(a: SIMD3<Float>, b: SIMD3<Float>) -> Float
+{
+    let crossP = cross(a, b)
+    let dotP = dot(normalize(a), normalize(b))
+    var angleBetween = 180 * (acos(dotP) / 3.14)
+    if (dot(crossP, SIMD3<Float>(0.01, 0.01, 0.99)) < 0.0)
+    {
+        angleBetween = 360 - angleBetween
+    }
+    
+    return angleBetween
+}
+

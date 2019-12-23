@@ -23,6 +23,15 @@ class RenderView: MTKView
         renderer = Renderer(renderView: self)
         self.delegate = renderer
         renderer.mtkView(self, drawableSizeWillChange: self.drawableSize)
+        
+        
+        
+//        let a = SIMD3<Float>(cos(radians_from_degrees(60)), sin(radians_from_degrees(60)), 0.0)
+//        let b = SIMD3<Float>(cos(radians_from_degrees(120)), sin(radians_from_degrees(120)), 0.0)
+//
+//        print(angleBetween(a: a, b: b))
+//        print(angleBetween(a: b, b: a))
+
     }
     
     required init(coder: NSCoder) {

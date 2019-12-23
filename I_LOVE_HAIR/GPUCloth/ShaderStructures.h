@@ -11,11 +11,14 @@
 
 #include <simd/simd.h>
 
-#define RASTERIZE_HAIR_PARTICLE_BUFFER   0
-#define RASTERIZE_VERTEX_UNIFORM_BUFFER  1
+#define RASTERIZE_VERTEX_BUFFER           0
+#define RASTERIZE_VERTEX_UNIFORM_BUFFER   1
 
-#define SIMULATION_HAIR_PARTICLE_BUFFER  0
-#define SIMULATION_UNIFORM_BUFFER        1
+#define SIMULATION_HAIR_PARTICLE_BUFFER   0
+#define SIMULATION_UNIFORM_BUFFER         1
+
+#define SIMULATION_VERTEX_BUFFER          1
+#define SIMULATION_CAMERA_POSITION_BUFFER 2
 
 struct ClothParticle {
     simd_float3 position;
@@ -54,6 +57,8 @@ struct HairParticle {
     float mass;
     
     simd_float3 color;
+    
+    simd_float3 force;
 };
 
 struct RasterizeUniforms {
@@ -66,6 +71,13 @@ struct SimulationUniforms {
     simd_float3 gravity;
     float kDamping;
 };
+
+struct Vertex {
+    simd_float4 position;
+    simd_float4 color;
+};
+
+
 
 
 
